@@ -1,7 +1,15 @@
 # CUDA-Attention
-POSTECH CSED405: GPU Acc Computing / CUDA Implementation of Naive Attention &amp; Flash Attention
-~~~
-$ docker build -t simple-flash-attention .
-$ docker run --gpus 1 -it --name flashattn_container simple-flash-attention /bin/bash
-(docker) $ cd simple-flash-attention && python3 ./bench.py
-~~~
+CUDA Implementation of Naive Attention &amp; Flash Attention
+
+## Environment
+```bash
+conda create -n attn python=3.8
+conda activate attn
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+## How To Run
+```bash
+cd src
+python bench.py
+```
